@@ -1,0 +1,2 @@
+<a class="" title="Ayarlar" href="Ayarlar.htlm">  <div id="ayarlar"></div> 	 </a> 				        
+<a class="" title="Çýkýþ" href="çýkýþ.htlm">  <div id="takasiptal"></div> 	 </a> 

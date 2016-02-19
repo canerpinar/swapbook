@@ -1,0 +1,27 @@
+1.MESAJLAR İÇERİĞİ         
+ data.MessageView(Integer.parseInt(req.getAttribute("session_id").toString()));
+            int mesajSayici=0;
+            while(mesajSayici<data.mesajlar.size())
+                {          
+                    %>
+                    <<div style="color:black; font-family: verdana; "><%=data.mesajwhomname.get(mesajSayici) %> diyorki </div> <div style="color:black;"><%=data.mesajlar.get(mesajSayici)%><form method="POST" action="profil.jsp?mesajgonder=mesaj&mesajatan=<%=Integer.parseInt(req.getAttribute("session_id").toString()) %>&mesajalan=<%=data.messagewhom.get(mesajSayici) %>"><input type="submit" value="Mesaj Gönder"></input></form></div>
+                    <%
+                    mesajSayici++;
+                }
+
+2.MESAJ GÖNDERME FORMU
+        else if(request.getParameter("mesajgonder")!=null)
+        {//mesajın kime gönderileceği
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+            int mesajatan=Integer.parseInt(request.getParameter("mesajatan"));
+            int mesajalan=Integer.parseInt(request.getParameter("mesajalan"));
+                %>
+                    
+                    <div style="color:black;">Size ulaşılması için mesajınızı yazınız.</div>
+                    <form id="mesajForm" action="takasOnay?mesajatan=<%=mesajatan %>&mesajalan=<%=mesajalan%>" method="POST">
+                        <div><textarea id="mesajYaz" name="mesajYaz"></textarea></div>
+                    <input type="submit" name="mesajGonder"></input></form>
+                <%
+            
+        }

@@ -1,0 +1,12 @@
+<div id="sabit">
+   
+   <div id="tem">
+            <ul>
+                <li><a href="#" class="current">Tüm Liste</a></li>
+				<li><a href="#">My Friends Swap</a></li>
+                <li><a href="#">My Listem</a></li>
+                <li><a href="#">My Üniversitem</a></li>                
+                
+            </ul>
+     </div> 
+   </div>
